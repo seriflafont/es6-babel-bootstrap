@@ -54,6 +54,20 @@ module.exports = function(grunt){
             }
 		},
 
+		babel: {
+			transpile:{
+				options: {
+		            sourceMap: true,
+		            presets: ['es2015']
+		        },
+		        files: [{
+	            	expand:true,
+	            	src:['development/js/**/*.es6'],
+	            	ext:'-compiled.js'
+	            }]
+			}
+	    },
+
 		watch: {
 			options: {
 				spawn: false,
@@ -77,7 +91,8 @@ module.exports = function(grunt){
 		}
 
 	}); 
-
+	
+	grunt.loadNpmTasks('grunt-babel');
 	grunt.loadNpmTasks('grunt-contrib-concat'); 
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');

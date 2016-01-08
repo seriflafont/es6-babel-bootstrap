@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.es6"],"names":[],"mappings":";;AAAA,IAAI,IAAI,GAAG,KAAK,CAAC,GAAG,CAAC,UAAA,CAAC;SAAI,CAAC,GAAG,CAAC;CAAA,CAAC,CAAC;AACjC,IAAI,IAAI,GAAG,KAAK,CAAC,GAAG,CAAC,UAAC,CAAC,EAAE,CAAC;SAAK,CAAC,GAAG,CAAC;CAAA,CAAC,CAAC","file":"main-compiled.js","sourcesContent":["var odds = evens.map(v => v + 1);\nvar nums = evens.map((v, i) => v + i);\n"]}

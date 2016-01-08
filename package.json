@@ -14,7 +14,9 @@
   },
   "homepage": "https://github.com/seriflafont/es6-babel-bootstrap#readme",
   "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
     "grunt": "^0.4.5",
+    "grunt-babel": "^6.0.0",
     "grunt-bower-concat": "^0.6.0",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-connect": "^0.11.2",

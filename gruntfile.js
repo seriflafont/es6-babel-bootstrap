@@ -13,11 +13,9 @@ module.exports = function(grunt){
 		bower_concat:{
 			dev: {
 				dest: 'development/js/libs.js',
-				cssDest: 'development/css/libs.css'
 			},
 			dist: {
 				dest: 'builds/dist/js/libs.js',
-				cssDest: 'builds/dist/css/libs.css'
 			}
 		},
 		sass: {
@@ -42,14 +40,18 @@ module.exports = function(grunt){
 		}, 
 
 		connect: {
-			server: {
-				options: {
-					hostname: 'localhost',
-					port: 3000,
-					base: 'development/',
-					livereload: true
-				}
-			}
+			options: {
+                port: 9000,
+                livereload: 35729,
+                // Change this to '0.0.0.0' to access the server from outside
+                hostname: 'localhost'
+            },
+            livereload: {
+                options: {
+                    open: true,
+                    base: [ 'development' ]
+                }
+            }
 		},
 
 		watch: {
@@ -57,12 +59,21 @@ module.exports = function(grunt){
 				spawn: false,
 				livereload: true
 			},
-			scripts: {
+			dev: {
 				files: ['development/**/*.html', 
 				'development/js/**/*.js',
 				'development/sass/**/*.scss'],
 				tasks: ['sass']
-			}
+			},
+			// Live reload
+            reload: {
+                options: {
+                    livereload: '<%= connect.options.livereload %>'
+                },
+                files: [
+                    '<%= watch.dev.files %>'
+                ]
+            }
 		}
 
 	}); 
@@ -72,7 +83,13 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-bower-concat');
-	grunt.registerTask('default', ['bower_concat:dev', 'sass:dev', 'connect', 'watch']);
+	grunt.registerTask('serve', function () {
+        grunt.task.run([
+            'connect:livereload',
+            'watch'
+        ]);
+    });
+	grunt.registerTask('default', ['bower_concat:dev', 'sass:dev', 'serve']);
 	grunt.registerTask('dist', ['bower_concat:dist', 'concat','sass:dist']);
 
 };

@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "A template for a es6 javascript webapp with babel transpiling incorporated.",
   "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/seriflafont/es6-babel-bootstrap.git"
@@ -15,5 +12,16 @@
   "bugs": {
     "url": "https://github.com/seriflafont/es6-babel-bootstrap/issues"
   },
-  "homepage": "https://github.com/seriflafont/es6-babel-bootstrap#readme"
+  "homepage": "https://github.com/seriflafont/es6-babel-bootstrap#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bower-concat": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^1.1.0"
+  },
+  "dependencies": {
+    "bower": "^1.7.2"
+  }
 }

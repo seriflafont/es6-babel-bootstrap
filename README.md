@@ -8,13 +8,13 @@ Grunt build is set up with:
 - es6 to es5 transpiling
 
 ## Dependencies:
-npm
-grunt-cli
+- npm
+- grunt-cli
 
 ## To use:
-clone repo
-cd to project folder
-run 'npm install'
-run 'bower install'
-run 'grunt' for development 
-run 'grunt dist' for distribution build
+1. clone repo
+2. cd to project folder
+3. run 'npm install'
+4. run 'bower install'
+5. run 'grunt' for development 
+6. run 'grunt dist' for distribution build

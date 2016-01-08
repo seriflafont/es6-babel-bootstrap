@@ -75,7 +75,7 @@ module.exports = function(grunt){
 			},
 			dev: {
 				files: ['development/**/*.html', 
-				'development/js/**/*.js',
+				'development/js/**/*.es6',
 				'development/sass/**/*.scss'],
 				tasks: ['sass']
 			},

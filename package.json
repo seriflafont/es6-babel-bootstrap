@@ -1,0 +1,19 @@
+{
+  "name": "es6-babel-bootstrap",
+  "version": "1.0.0",
+  "description": "A template for a es6 javascript webapp with babel transpiling incorporated.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seriflafont/es6-babel-bootstrap.git"
+  },
+  "author": "Sarah E Lamont",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seriflafont/es6-babel-bootstrap/issues"
+  },
+  "homepage": "https://github.com/seriflafont/es6-babel-bootstrap#readme"
+}
